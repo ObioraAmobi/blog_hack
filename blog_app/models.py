@@ -1,6 +1,7 @@
 from __future__ import unicode_literals
 
 from django.db import models
+from django.utils import timezone
 
 
 class Post(models.Model):
@@ -14,7 +15,7 @@ class Post(models.Model):
         blank=True, null=True)
     views = models.IntegerField(default=0)  # Record how often a post is seen
     tag = models.CharField(max_length=100, blank=True, null=True)
-    image = models.ImageField(upload_to="images", blank=True, null=True)
+    # image = models.ImageField(upload_to="images", blank=True, null=True)
     # to use ImageField be sure to have installed the pillow imaging library
 
 
