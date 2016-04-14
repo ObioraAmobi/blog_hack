@@ -18,10 +18,10 @@ class Post(models.Model):
     # to use ImageField be sure to have installed the pillow imaging library
 
 
-def publish(self):
-    self.published_date = timezone.now()
-    self.save()
+    def publish(self):
+        self.published_date = timezone.now()
+        self.save()
 
 
-def __str__(self):
-    return self.title
+    def __str__(self):
+        return self.title

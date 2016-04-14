@@ -8,8 +8,8 @@ def bloglist(request):
     return render(request, 'bloglist.html', {'posts': posts})
 
 
-def posts(request):
+def posts(request, id):
     post = get_object_or_404(Post, pk=id)
     post.views += 1
     post.save()
-    render(request, 'posts.html', {'post': post})
+    return render(request, 'posts.html', {'post': post})

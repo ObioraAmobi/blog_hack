@@ -21,5 +21,5 @@ from blog_app import views as blog_views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^blog/$', blog_views.bloglist, name='bloglist'),
-    url(r'^blog/posts/$', blog_views.posts, name='posts'),
+    url(r'^blog/(?P<id>\d+)/$', blog_views.posts),
 ]
