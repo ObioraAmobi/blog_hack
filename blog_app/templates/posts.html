@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h2>{{ post.title}}</h2>
+    <p>{{ post.content | linebreaks }}</p>
+    <p>{{ post.tag }}</p>
+    <p>{{ post.views }} people have viewed this post</p>
+    <button class="btn btn-default" onclick="location.href='/blog/'">Back to Blog</button>
+{% endblock %}
