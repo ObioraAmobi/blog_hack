@@ -1,0 +1,55 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<head>
+    <title>Team Obi Blog Hack</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.6/cerulean/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static "css/styles.css" %}">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+</head>
+<body>
+<div id="masthead">
+    <div class="container">
+         <div class="row">
+                <h1> Team Obi Blog Hack
+                    <p id="logo" class="lead">Random Musings on whatever is in our head at any one moment</p>
+                </h1>
+        </div>
+
+        <nav class='row'>
+				<ul class='nav nav-pills nav-justified col-sm-2'>
+				    <li><a href="/">Home</a></li>
+				    <li><a href="/blog">Blog</a></li>
+		    	    <li><a href="#">Photos</a></li>
+                    <li><a href="/post/new/">New Blog Post</a></li>
+                </ul>
+		</nav>
+
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel">
+                <div class="panel-body">
+                    <!--blog entries-->
+                    {% block content %}
+                    {% endblock %}
+                    <!--blog entries-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-4 col-sm-offset-5">
+        <button type="button" class="btn btn-facebook" style="background-color:darkblue" ><a href="#"><i class="fa fa-facebook" style="color:white"></i></a></button>
+        <button type="button" class="btn btn-twitter" style="background-color:cornflowerblue"><a href ="#"><i class="fa fa-twitter" style="color:whitesmoke"></i></a></button>
+        <button type="button" class="btn btn-tumblr"><a href ="#"><i class="fa fa-tumblr"></i></a></button>
+    </div>
+    <p>Created by Team Obi</p>
+</div>
+<!-- script references -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
+</body>
+</html>
