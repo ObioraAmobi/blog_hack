@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+    <img id="blogimage" class="img-circle" src="/media/{{ post.image }}">
     <h2>{{ post.title}}</h2>
     <p>{{ post.content | linebreaks }}</p>
     <p>Tag: {{ post.tag }}</p>

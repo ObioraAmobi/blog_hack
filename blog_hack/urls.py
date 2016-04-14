@@ -16,10 +16,12 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from blog_app import views as blog_views
+from settings import MEDIA_ROOT
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^blog/$', blog_views.bloglist, name='bloglist'),
     url(r'^blog/(?P<id>\d+)/$', blog_views.posts),
+    url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': MEDIA_ROOT}),
 ]
